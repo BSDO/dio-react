@@ -8,9 +8,7 @@ export const InputContainer = styled.div`
     display:flex;
     align-items:end;
 
-    /*
-        input
-    */
+  
     input{
         width:100%;
         height:75px;
@@ -18,4 +16,8 @@ export const InputContainer = styled.div`
         font-size:40px;
         padding:0 10px;
     }   
+
+    &:hover {
+        opacity :0.7;
+    }
 `
