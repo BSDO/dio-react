@@ -5,6 +5,8 @@ import Button from './components/Button';
 import { Container,Content ,Row} from "./styles";
 import { useState } from 'react';
 
+import TextoH1 from './components/textos';
+
 const App = () => 
 {
 	//Cria estados dos numeros e operacao para serem usados
@@ -19,6 +21,8 @@ const App = () =>
 		setNumber('')
 		setOperacao('')
 	}
+
+	// funcao para adicionar o numero 
 	const handleAddNumber = (num) => 
 	{
 		setCurrentNUmber(prev=> `${prev}${num}`)
@@ -26,8 +30,11 @@ const App = () =>
 	
 	const Soma = ()=> {
 
+		
 		if(firstNumber === '')
 		{
+
+			// Adiciona o primeiro numero ao segundo caso seja a uma operacao
 			setNumber(String(currentNumber));
 			setCurrentNUmber('')
 			setOperacao('+')
@@ -35,7 +42,10 @@ const App = () =>
 
 
 		}else{
+			// pegar o valor do primeiro numero guardo e soma com o segundo sendo digitado 
 			const sum = Number(firstNumber) + Number(currentNumber);
+
+			// transforma o soma dos numero para mostrar no resultado
 			setCurrentNUmber(String(sum))
 			setOperacao('')
 		}
@@ -52,8 +62,8 @@ const App = () =>
 
 
 		}else{
-			const sum = Number(firstNumber) - Number(currentNumber);
-			setCurrentNUmber(String(sum))
+			const sub = Number(firstNumber) - Number(currentNumber);
+			setCurrentNUmber(String(sub))
 			setOperacao('')
 		}
 	}
@@ -69,8 +79,8 @@ const App = () =>
 
 
 		}else{
-			const sum = Number(firstNumber) * Number(currentNumber);
-			setCurrentNUmber(String(sum))
+			const mult = Number(firstNumber) * Number(currentNumber);
+			setCurrentNUmber(String(mult))
 			setOperacao('')
 		}
 	}
@@ -86,8 +96,8 @@ const App = () =>
 
 
 		}else{
-			const sum = Number(firstNumber) / Number(currentNumber);
-			setCurrentNUmber(String(sum))
+			const div = Number(firstNumber) / Number(currentNumber);
+			setCurrentNUmber(String(div))
 			setOperacao('')
 		}
 	}
@@ -104,11 +114,12 @@ const App = () =>
 
 
 		}else{
-			const sum = Number(firstNumber) ** Number(currentNumber);
-			setCurrentNUmber(String(sum))
+			const expo = Number(firstNumber) ** Number(currentNumber);
+			setCurrentNUmber(String(expo))
 			setOperacao('')
 		}
 	}
+
 	const Resultado = ()=>{
 		if(firstNumber !== '' && operacao !== '' && currentNumber !== ''){
 			switch(operacao){
@@ -130,13 +141,21 @@ const App = () =>
 				default:
 				break;	
 			}
+		}else{
+			alert('Digite os numeros e operacao');
 		}
 
 	}
 
 	return (
 		<Container>
+			
 			<Content>
+
+				<TextoH1> </TextoH1>	
+		
+
+
 				<Input value={currentNumber}/>
 				
 				<Row>

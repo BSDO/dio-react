@@ -1,0 +1,34 @@
+.item-list{
+    padding: 20px;
+}
+
+.item-list strong{
+    font-size: 3rem;
+    color:#539BF5;
+
+}
+
+.item-list a{
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 10px 0;
+    font-size: 25px;
+    color: #6063f0;
+    padding-top: 30px;
+
+}
+.item-list p{
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 10px 0;
+    font-size: 25px;
+    color: #fff;
+
+
+}
+
+
+.item-list a:hover{
+    cursor: pointer;
+}
+

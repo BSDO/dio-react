@@ -1,0 +1,36 @@
+.card {
+    width: calc(33.33% - 10px); /* 10px para margens entre os cartões */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color:white;
+	text-align: center;
+}
+
+.id{
+	font-size: 30px;
+}
+
+.name{
+	font-size: 25px;
+
+}
+
+.link{
+	text-decoration: none;
+	color:#fff;
+	font-size:15px;
+	text-align: justify; 
+	padding: 20px;
+}
+ 
+.descricao{
+	font-size: 15px;
+	margin: 30px;
+	text-align: justify;
+
+}

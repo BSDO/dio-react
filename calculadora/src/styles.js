@@ -7,12 +7,14 @@ export const Container = styled.div`
     display:flex;
     align-items:center;
     justify-content:center;
+    
 `
 
 export const Content = styled.div`
     background-color:#000;
     width:20%;
-
+    display:flex;
+    flex-direction:column;
 
 `
 
